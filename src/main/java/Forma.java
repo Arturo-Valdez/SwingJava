@@ -1,6 +1,8 @@
 import com.formdev.flatlaf.FlatDarculaLaf;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Forma extends JFrame{
     private JPanel panelPrincipal;
@@ -10,6 +12,9 @@ public class Forma extends JFrame{
 
     public Forma(){
         inicializarForma();
+        campoTexto.addActionListener(e -> {
+            System.out.println("Se ejecuto action listener: " + e);
+        });
     }
 
     private void inicializarForma(){
